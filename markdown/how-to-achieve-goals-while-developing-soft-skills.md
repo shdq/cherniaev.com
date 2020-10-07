@@ -1,6 +1,8 @@
 ---
 title: "How to Achieve Goals while Developing Soft Skills"
 date: "2020-10-07"
+excerpt: "The article about setting and achieving goals while staying focused and developing soft skills"
+image: "https://cdn-images-1.medium.com/max/2400/1*_16W2oRZENDqOK9kn-l6lQ.jpeg"
 ---
 
 ![The Vessel](https://cdn-images-1.medium.com/max/2400/1*_16W2oRZENDqOK9kn-l6lQ.jpeg "The Vessel, New York City")
