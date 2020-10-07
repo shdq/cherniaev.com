@@ -12,14 +12,42 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Front-end developer</p>
+        <p align="center">
+          Javascript and React developer, Google certified Mobile Web Specialist
+          <br />
+          <small>
+            <a
+              href="https://twitter.com/shdq"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>{" "}
+            <span>&#183;</span>{" "}
+            <a
+              href="https://github.com/shdq"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>{" "}
+            <span>&#183;</span>{" "}
+            <a
+              href="https://www.linkedin.com/in/cherniaev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </small>
+        </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
+              <Link href={`/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
