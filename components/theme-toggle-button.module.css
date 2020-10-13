@@ -1,0 +1,14 @@
+.toggleButton {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.toggleButton:focus {
+  outline: 3px dashed coral;
+}
+
+.icon {
+  cursor: pointer;
+}
