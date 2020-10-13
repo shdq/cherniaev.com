@@ -2,6 +2,7 @@ import "../styles/global.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
+import { ThemeProvider } from "../context/theme-provider";
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -15,7 +16,11 @@ const App = ({ Component, pageProps }) => {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 };
 
 export default App;
