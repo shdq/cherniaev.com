@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Toggle from "./theme-toggle-button";
 
 const name = "Sergei Cherniaev";
 export const siteTitle = "Sergei Cherniaev's blog";
@@ -12,6 +13,9 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.flexRight}>
+        <Toggle />
+      </div>
       <header className={styles.header}>
         {home ? (
           <>
