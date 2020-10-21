@@ -4,13 +4,14 @@ import { useTheme } from "../hooks/useTheme";
 
 export default function Toggle() {
   const { theme, setTheme } = useTheme();
+  const nextTheme = theme === "dark" ? "light" : "dark";
 
   return (
     <button
-      title={`Switch to the ${theme === "dark" ? "light" : "dark"} theme`}
+      title={`Switch to the ${nextTheme} theme`}
       className={toggleButton}
       onClick={() => {
-        setTheme(theme === "dark" ? "light" : "dark");
+        setTheme(nextTheme);
       }}
     >
       {theme === "dark" ? (
