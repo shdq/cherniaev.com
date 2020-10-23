@@ -1,8 +1,10 @@
-import "../styles/global.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 import { ThemeProvider } from "../context/theme-provider";
+
+import "../styles/global.css";
+import "prismjs/themes/prism-tomorrow.css";
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
