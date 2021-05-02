@@ -2,11 +2,11 @@
 title: "Prepare for Coding Interviews, not Just Solve LeetCode Problems"
 date: "2021-05-02"
 excerpt: "Description"
-tags: ["coding problems", "interview", "leetcode"]
+tags: ["coding problems", "interviews", "leetcode"]
 image: "https://cdn-images-1.medium.com/max/2400/1*8Nqenq5SziLCGICGFORX6g.jpeg"
 ---
 
-![The Vessel](https://cdn-images-1.medium.com/max/2400/1*8Nqenq5SziLCGICGFORX6g.jpeg "Practice makes perfect")
+![Practice makes perfect](https://cdn-images-1.medium.com/max/2400/1*8Nqenq5SziLCGICGFORX6g.jpeg "Practice makes perfect")
 
 <small>Photo by Brett Jordan on [Unsplash](https://unsplash.com/photos/Fp4ERdkR5jU)</small>
 
@@ -42,5 +42,5 @@ _Sometimes, interviewers prefer to use Google Docs or similar as a code editor, 
 
 ## Homework to do
 
-After practice, record the problem you solved, a brief review of the solution, data structure, and algorithm you used. A stylesheet or [Notion](https://www.notion.so/) will be helpful. Such a journal will help you track your progress and quickly recall the problems you solved right before an actual interview.
+After practice, record the problem you solved, a brief review of the solution, data structure, and algorithm you used. A stylesheet or [notion](https://www.notion.so/) will be helpful. Such a journal will help you track your progress and quickly recall the problems you solved right before an actual interview.
 
