@@ -1,9 +1,9 @@
 ---
 title: "Prepare for Coding Interviews, not Just Solve LeetCode Problems"
-date: "2021-05-01"
+date: "2021-05-02"
 excerpt: "Description"
 tags: ["coding problems", "interview", "leetcode"]
-image: "https://cdn-images-1.medium.com/max/2400/1*_16W2oRZENDqOK9kn-l6lQ.jpeg"
+image: "https://cdn-images-1.medium.com/max/2400/1*8Nqenq5SziLCGICGFORX6g.jpeg"
 ---
 
 ![The Vessel](https://cdn-images-1.medium.com/max/2400/1*8Nqenq5SziLCGICGFORX6g.jpeg "Practice makes perfect")
@@ -18,7 +18,7 @@ Time flies, especially on interviews. On average, you have about 45 minutes for 
 
 ## Understand the problem
 
-Read the problem carefully, and repeat it back. I talk to a [rubber duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging), it looks strange, but it works. The next step is to clarify things like the format and range of the input. Online platforms, like [LeetCode](https://leetcode.com/), have examples and constraints sections, don't ignore them. At last, go through a small sample to ensure that you grasp the problem.
+Read the problem carefully, and repeat it back. I talk to a [rubber duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging), it looks strange, but it works. The next step is to clarify things like the format and range of the input. LeetCode has examples and constraints sections, don't ignore them. At last, go through a small sample to ensure that you grasp the problem.
 
 ## Devise a plan
 
@@ -36,7 +36,7 @@ Look at your code and check for errors, like array boundaries in a loop, redunda
 
 ## Run the code
 
-Online platforms often let you test code against custom inputs, so try all of your examples and then submit. If the solution is accepted, well done. If it doesn't, return to the previous paragraph.
+LeetCode lets you test code against custom inputs, so try all of your examples and then submit. If the solution is accepted, well done. If it doesn't, return to the previous paragraph.
 
 _Sometimes, interviewers prefer to use Google Docs or similar as a code editor, so there is no «run» button. Therefore, you tell the interviewer that you finished coding._
 
