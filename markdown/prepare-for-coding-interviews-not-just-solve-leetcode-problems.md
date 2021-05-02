@@ -1,7 +1,7 @@
 ---
 title: "Prepare for Coding Interviews, not Just Solve LeetCode Problems"
 date: "2021-05-02"
-excerpt: "Description"
+excerpt: "Most of us practice on LeetCode to ace an interview and get a better job. Practice is not about the number of problems you solved, but how do you solve them"
 tags: ["coding problems", "interviews", "leetcode"]
 image: "https://cdn-images-1.medium.com/max/2400/1*8Nqenq5SziLCGICGFORX6g.jpeg"
 ---
@@ -43,4 +43,3 @@ _Sometimes, interviewers prefer to use Google Docs or similar as a code editor, 
 ## Homework to do
 
 After practice, record the problem you solved, a brief review of the solution, data structure, and algorithm you used. A stylesheet or [notion](https://www.notion.so/) will be helpful. Such a journal will help you track your progress and quickly recall the problems you solved right before an actual interview.
-
