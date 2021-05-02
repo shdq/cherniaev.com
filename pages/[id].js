@@ -21,7 +21,7 @@ export default function Post({ postData }) {
         />
         <meta property="og:image" content={postData.image} />
         <meta name="og:title" content={postData.title} />
-        <meta name="twitter:card" content={postData.image} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
