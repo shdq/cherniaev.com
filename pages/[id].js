@@ -5,6 +5,9 @@ import Date from "../components/date";
 import { getAllPostIds, getPostData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
 import Prism from "prismjs";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import Link from "next/link";
 
 export default function Post({ postData }) {
   useEffect(() => {
@@ -28,7 +31,24 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <ReactMarkdown
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            a: ({ node, ...props }) => {
+              return (
+                <Link
+                  href={props.href}
+                  title={props.title}
+                  target={props.href?.includes("http") ? "_blank" : "_self"}
+                >
+                  {props.children[0]}
+                </Link>
+              );
+            },
+          }}
+        >
+          {postData.contentMarkdown}
+        </ReactMarkdown>
       </article>
     </Layout>
   );
