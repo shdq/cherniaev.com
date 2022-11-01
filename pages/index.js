@@ -47,8 +47,8 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/${id}`}>
-                <a className={utilStyles.blogLink}>{title}</a>
+              <Link href={`/${id}`} className={utilStyles.blogLink} legacyBehavior>
+                {title}
               </Link>
               <br />
               <small className={utilStyles.lightText}>
