@@ -31,7 +31,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData?.date} />
         </div>
-        <ReactMarkdown
+        {/* <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
           components={{
             a: ({ node, ...props }) => {
@@ -48,7 +48,7 @@ export default function Post({ postData }) {
           }}
         >
           {postData?.contentMarkdown}
-        </ReactMarkdown>
+        </ReactMarkdown> */}
       </article>
     </Layout>
   );
