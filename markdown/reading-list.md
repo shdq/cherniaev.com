@@ -18,30 +18,30 @@ tags: ["books", "reading list"]
 - [Books on my waiting list](#waiting-list)
 - [Other books](#other)
 
-## <a name="current-reading"></a>Currently reading or writing a review
+## <span id="current-reading"></span>Currently reading or writing a review
 
 - **A Common-Sense Guide to Data Structures and Algorithms** (2nd Edition) by Jay Wengrow
 - **Grokking Algorithms** by Aditya Y. Bhargava
 - **The Coding Career Handbook** by Shawn Wang aka @swyx
 
-## <a name="tech-books"></a>Tech books
+## <span id="tech-books"></span>Tech books
 
 - **The Pragmatic Programmer** (2nd Edition) by David Thomas & Andrew Hunt
 - **JavaScript for Impatient Programmers** by Dr. Axel Rauschmayer
 - **Eloquent JavaScript** by Marijn Haverbeke
 
-## <a name="non-tech-books"></a>Non-tech books
+## <span id="non-tech-books"></span>Non-tech books
 
 - **Sapiens** by Yuval Noah Harari
 - **Atomic Habits** by James Clear
 
-## <a name="waiting-list"></a>Waiting list, books I'm going to read
+## <span id="waiting-list"></span>Waiting list, books I'm going to read
 
 - **Refactoring** (2nd Edition) by Martin Fowler
 - **Designing Data-Intensive Applications** by Martin Kleppmann
 - **Cracking the Coding Interview** by Gayle Laakmann McDowell
 - **The Unicorn Project** by Gene Kim
 
-## <a name="other"></a>Other books you can ask me about
+## <span id="other"></span>Other books you can ask me about
 
 - **Brief Answers To The Big Questions** by Stephen Hawking
