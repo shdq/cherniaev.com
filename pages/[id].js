@@ -37,11 +37,11 @@ export default function Post({ postData }) {
             a: ({ node, ...props }) => {
               return (
                 <Link
-                  href={props.href}
-                  title={props.title}
-                  target={props.href?.includes("http") ? "_blank" : "_self"}
+                  href={props?.href}
+                  title={props?.title}
+                  target={props?.href?.includes("http") ? "_blank" : "_self"}
                 >
-                  {props.children[0]}
+                  {props?.children?.[0]}
                 </Link>
               );
             },
