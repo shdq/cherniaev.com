@@ -17,19 +17,19 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData?.title}</title>
         <meta
           name="description"
-          content={postData.excerpt || "Sergei Cherniaev's blog"}
+          content={postData?.excerpt || "Sergei Cherniaev's blog"}
         />
-        <meta property="og:image" content={postData.image} />
-        <meta name="og:title" content={postData.title} />
+        <meta property="og:image" content={postData?.image} />
+        <meta name="og:title" content={postData?.title} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1 className={utilStyles.headingXl}>{postData?.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+          <Date dateString={postData?.date} />
         </div>
         <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
@@ -47,7 +47,7 @@ export default function Post({ postData }) {
             },
           }}
         >
-          {postData.contentMarkdown}
+          {postData?.contentMarkdown}
         </ReactMarkdown>
       </article>
     </Layout>
