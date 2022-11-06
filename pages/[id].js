@@ -33,7 +33,7 @@ export default function Post({ postData }) {
         </div>
         <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
-          components={{
+          components={props && {
             a: ({ node, ...props }) => {
               return (
                 <Link
