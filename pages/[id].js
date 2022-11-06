@@ -17,38 +17,38 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData?.title}</title>
+        <title>{postData.title}</title>
         <meta
           name="description"
-          content={postData?.excerpt || "Sergei Cherniaev's blog"}
+          content={postData.excerpt || "Sergei Cherniaev's blog"}
         />
-        <meta property="og:image" content={postData?.image} />
-        <meta name="og:title" content={postData?.title} />
+        <meta property="og:image" content={postData.image} />
+        <meta name="og:title" content={postData.title} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData?.title}</h1>
+        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData?.date} />
+          <Date dateString={postData.date} />
         </div>
-        {/* <ReactMarkdown
+        <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
           components={{
             a: ({ node, ...props }) => {
               return (
                 <Link
-                  href={props.href}
-                  title={props.title}
-                  target={props.href?.includes("http") ? "_blank" : "_self"}
+                  href={props?.href}
+                  title={props?.title}
+                  target={props?.href?.includes("http") ? "_blank" : "_self"}
                 >
-                  {props.children[0]}
+                  {props?.children[0]}
                 </Link>
               );
             },
           }}
         >
-          {postData?.contentMarkdown}
-        </ReactMarkdown> */}
+          {postData.contentMarkdown}
+        </ReactMarkdown>
       </article>
     </Layout>
   );
@@ -56,7 +56,6 @@ export default function Post({ postData }) {
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
-  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -65,7 +64,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
-  console.log(postData);
   return {
     props: {
       postData,
