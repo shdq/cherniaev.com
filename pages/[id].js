@@ -1,19 +1,21 @@
-import { useEffect } from "react";
 import Head from "next/head";
-import Layout from "../components/layout";
-import Date from "../components/date";
-import { getAllPostIds, getPostData } from "../lib/posts";
-import utilStyles from "../styles/utils.module.css";
-import Prism from "prismjs";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
 import Link from "next/link";
 
-export default function Post({ postData }) {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import dark from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow";
+import light from "react-syntax-highlighter/dist/cjs/styles/prism/one-light";
 
+import { useTheme } from "../hooks/useTheme";
+import utilStyles from "../styles/utils.module.css";
+import { getAllPostIds, getPostData } from "../lib/posts";
+
+import Layout from "../components/layout";
+import Date from "../components/date";
+
+export default function Post({ postData }) {
+  const { theme } = useTheme();
   return (
     <Layout>
       <Head>
@@ -43,6 +45,22 @@ export default function Post({ postData }) {
                 >
                   {props?.children?.[0]}
                 </Link>
+              );
+            },
+            code({ node, inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || "");
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  children={String(children).replace(/\n$/, "")}
+                  style={theme === "dark" ? dark : light}
+                  language={match[1]}
+                  PreTag="div"
+                  {...props}
+                />
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
               );
             },
           }}
