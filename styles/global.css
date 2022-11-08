@@ -1,6 +1,10 @@
 :root {
   --background-color: #ffffff;
   --color: #333333;
+  --background-code-color: #eeeeee;
+  --code-color: #2d2d2d;
+  --image-filter: grayscale(0%);
+  --svg-inverse-filter: none;
 }
 
 html,
@@ -38,8 +42,16 @@ img {
   display: block;
 }
 
+img:not([src*=".svg"]) {
+  filter: var(--image-filter);
+}
+
 article {
   font-size: 1.125rem;
+}
+
+article svg {
+  filter: var(--svg-inverse-filter);
 }
 
 blockquote {
@@ -52,13 +64,18 @@ blockquote {
 
 pre {
   border-radius: 5px;
-  font-size: 0.8rem !important;
+  font-size: 0.8rem;
 }
 
 p > code, li > code {
+  padding: .2em .4em;
+  margin: 0;
   font-size: 0.8rem;
   border-radius: 5px;
-  padding: 5px 8px;
-  background-color: #3d3d3d;
-  color: #eee;
+  color: var(--code-color);
+  background-color: var(--background-code-color);
+}
+
+strong {
+  color: var(--code-color);
 }

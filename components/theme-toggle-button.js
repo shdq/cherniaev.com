@@ -1,4 +1,3 @@
-import React from "react";
 import { toggleButton, icon } from "./theme-toggle-button.module.css";
 import { useTheme } from "../hooks/useTheme";
 
