@@ -1,3 +1,7 @@
+import Image from "next/image";
+import sunIcon from "../public/images/sun.svg";
+import moonIcon from "../public/images/moon.svg";
+
 import { toggleButton, icon } from "./theme-toggle-button.module.css";
 import { useTheme } from "../hooks/useTheme";
 
@@ -14,9 +18,9 @@ export default function Toggle() {
       }}
     >
       {theme === "dark" ? (
-        <img className={icon} src="/images/sun.svg" alt="Sun Icon" />
+        <Image src={sunIcon} className={icon} alt="Sun Icon" />
       ) : (
-        <img className={icon} src="/images/moon.svg" alt="Moon Icon" />
+        <Image src={moonIcon} className={icon} alt="Moon Icon" />
       )}
     </button>
   );
