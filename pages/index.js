@@ -4,6 +4,8 @@ import Layout, { siteTitle } from "../components/layout";
 import Date from "../components/date";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
+import { Heading, Text } from "spartak-ui";
+
 
 export default function Home({ allPostsData }) {
   return (
@@ -12,48 +14,56 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p align="center">
-          Javascript and React developer, Google certified Mobile Web Specialist
-          <br />
-          <small>
-            <a
-              href="https://twitter.com/shdq"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>{" "}
-            <span>&#183;</span>{" "}
-            <a
-              href="https://github.com/shdq"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>{" "}
-            <span>&#183;</span>{" "}
-            <a
-              href="https://www.linkedin.com/in/cherniaev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </small>
-        </p>
+        <Text size="xl" align="center" secondary>
+          Frontend Engineer, Google certified Mobile Web
+          Specialist
+        </Text>
+        <Text size="xl" align="center" secondary>
+          Typescript &#183; Javascript &#183; React &#183; Node.js
+        </Text>
+        <Text size="md" align="center">
+          <Text
+            as="a"
+            color="red"
+            href="https://twitter.com/shdq"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </Text>{" "}
+          <span>&#183;</span>{" "}
+          <Text
+            as="a"
+            color="red"
+            href="https://github.com/shdq"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </Text>{" "}
+          <span>&#183;</span>{" "}
+          <Text
+            as="a"
+            color="red"
+            href="https://www.linkedin.com/in/cherniaev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </Text>
+        </Text>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <Heading size="xl">Blog</Heading>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/${id}`} className={utilStyles.blogLink} legacyBehavior>
+              <Text as={Link} href={`/${id}`} size="xl" color="red">
                 {title}
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
+              </Text>
+              <Text size="md" secondary>
                 <Date dateString={date} />
-              </small>
+              </Text>
             </li>
           ))}
         </ul>
