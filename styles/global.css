@@ -1,6 +1,5 @@
 :root {
   --background-color: #ffffff;
-  --color: #333333;
   --background-code-color: #eeeeee;
   --code-color: #2d2d2d;
   --image-filter: grayscale(0%);
@@ -13,12 +12,11 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
   font-size: 18px;
 }
 
 body {
-  color: var(--color);
+  color: var(--colors-foreground);
   background-color: var(--background-color);
   transition: background-color 300ms linear;
 }
@@ -28,7 +26,7 @@ body {
 }
 
 a {
-  color: var(--color);
+  color: var(--colors-foreground);
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -57,8 +55,8 @@ article svg {
 blockquote {
   margin: 0;
   padding: 0.125rem 1.5rem;
-  border-left: 5px solid var(--color);
-  color: var(--color);
+  border-left: 5px solid var(--colors-foreground);;
+  color: var(--colors-foreground);
   font-size: 1.25rem;
 }
 
@@ -74,8 +72,4 @@ p > code, li > code {
   border-radius: 5px;
   color: var(--code-color);
   background-color: var(--background-code-color);
-}
-
-strong {
-  color: var(--code-color);
 }

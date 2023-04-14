@@ -1,4 +1,4 @@
-import { ThemeProvider } from "../context/theme-provider";
+import { ThemeProvider } from "spartak-ui";
 import { Analytics } from '@vercel/analytics/react';
 
 import "../styles/global.css";

@@ -1,7 +1,10 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Toggle from "./theme-toggle-button";
+import { Heading, Text, useTheme } from "spartak-ui";
+import { Toggle } from "./toggle";
+import { inverseSvg, reduceImageBrightness } from "../themes/helpers";
 
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -12,6 +15,13 @@ const name = "Sergei Cherniaev";
 export const siteTitle = "Sergei Cherniaev's blog";
 
 export default function Layout({ children, home }) {
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    inverseSvg(theme);
+    reduceImageBrightness(theme);
+  }, [theme]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +39,9 @@ export default function Layout({ children, home }) {
               alt={name}
               placeholder="blur"
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <Heading as="h1" size="xxl" css={{ padding: "$paddingLG 0" }}>
+              {name}
+            </Heading>
           </>
         ) : (
           <>
@@ -41,22 +53,22 @@ export default function Layout({ children, home }) {
                 placeholder="blur"
               />
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <Heading as="p" size="xl" css={{ padding: "$paddingLG 0" }}>
               <Link
                 href="/"
                 className={`${utilStyles.colorInherit} ${utilStyles.blogLink}`}
               >
                 {name}
               </Link>
-            </h2>
+            </Heading>
           </>
         )}
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
+        <Text as={Link} href="/" size="md" color="red">
+          ← Back to home
+        </Text>
       )}
     </div>
   );

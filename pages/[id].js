@@ -7,8 +7,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import dark from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow";
 import light from "react-syntax-highlighter/dist/cjs/styles/prism/one-light";
 
-import { useTheme } from "../hooks/useTheme";
-import utilStyles from "../styles/utils.module.css";
+import { Heading, Text, useTheme } from "spartak-ui";
 import { getAllPostIds, getPostData } from "../lib/posts";
 
 import Layout from "../components/layout";
@@ -16,6 +15,7 @@ import Date from "../components/date";
 
 export default function Post({ postData }) {
   const { theme } = useTheme();
+
   return (
     <Layout>
       <Head>
@@ -29,10 +29,12 @@ export default function Post({ postData }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <Heading as="h1" size="xl" css={{ paddingBottom: "$paddingLG" }}>
+          {postData.title}
+        </Heading>
+        <Text secondary size="md">
           <Date dateString={postData.date} />
-        </div>
+        </Text>
         <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
           components={{
