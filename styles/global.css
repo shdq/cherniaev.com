@@ -15,12 +15,6 @@ body {
   font-size: 18px;
 }
 
-body {
-  color: var(--colors-foreground);
-  background-color: var(--background-color);
-  transition: background-color 300ms linear;
-}
-
 * {
   box-sizing: border-box;
 }
