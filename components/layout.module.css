@@ -10,6 +10,13 @@
   align-items: center;
 }
 
+.postHeader {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+}
+
 .headerImage {
   width: 6rem;
   height: 6rem;
@@ -27,4 +34,11 @@
 .flexRight {
   display: flex;
   justify-content: flex-end;
+}
+
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
