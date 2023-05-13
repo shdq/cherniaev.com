@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Heading, Text, Avatar, useTheme } from "spartak-ui";
 import { Toggle } from "./toggle";
-import { inverseSvg, reduceImageBrightness } from "../themes/helpers";
+import { invertSvg, reduceImageBrightness, invertBackgroundCodeColor } from "../themes/helpers";
 
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -18,8 +18,9 @@ export default function Layout({ children, home }) {
   const { theme } = useTheme();
 
   useEffect(() => {
-    inverseSvg(theme);
+    invertSvg(theme);
     reduceImageBrightness(theme);
+    invertBackgroundCodeColor(theme);
   }, [theme]);
 
   return (
