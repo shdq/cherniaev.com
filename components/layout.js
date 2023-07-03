@@ -2,9 +2,14 @@ import { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { Heading, Text, Avatar, useTheme } from "spartak-ui";
+import { Button, Heading, Text, Avatar, useTheme } from "spartak-ui";
 import { Toggle } from "./toggle";
-import { invertSvg, reduceImageBrightness, invertBackgroundCodeColor } from "../themes/helpers";
+import { IconArrowLeft } from "@tabler/icons-react";
+import {
+  invertSvg,
+  reduceImageBrightness,
+  invertBackgroundCodeColor,
+} from "../themes/helpers";
 
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -70,9 +75,16 @@ export default function Layout({ children, home }) {
       </>
       <main>{children}</main>
       {!home && (
-        <Text as={Link} href="/" size="md" color="red">
-          ← Back to home
-        </Text>
+        <Button
+          icon={<IconArrowLeft size={18} />}
+          variant="text"
+          as={Link}
+          href="/"
+          size="md"
+          color="red"
+        >
+          Main page
+        </Button>
       )}
     </div>
   );
