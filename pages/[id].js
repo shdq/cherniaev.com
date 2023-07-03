@@ -7,7 +7,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import dark from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow";
 import light from "react-syntax-highlighter/dist/cjs/styles/prism/one-light";
 
-import { Heading, Text, useTheme } from "spartak-ui";
+import { Heading, Text, Badge, useTheme } from "spartak-ui";
 import { getAllPostIds, getPostData } from "../lib/posts";
 
 import Layout from "../components/layout";
@@ -15,6 +15,15 @@ import Date from "../components/date";
 
 export default function Post({ postData }) {
   const { theme } = useTheme();
+
+  const tags = postData.tags || [];
+  const badges = tags.map((tag) => (
+    <Link href={`/tag/${tag.split(" ").join("-")}`} key={tag}>
+      <Badge css={{ margin: "0 5px 0 0" }} variant="outlined" color="green">
+        {tag.toLowerCase()}
+      </Badge>
+    </Link>
+  ));
 
   return (
     <Layout>
@@ -29,12 +38,13 @@ export default function Post({ postData }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <article>
-        <Heading as="h1" size="xl" css={{ paddingBottom: "$paddingLG" }}>
+        <Heading as="h1" size="xl" css={{ paddingBottom: "$paddingXS" }}>
           {postData.title}
         </Heading>
-        <Text secondary size="md">
+        <Text css={{ paddingBottom: "$paddingXS" }} secondary size="md">
           <Date dateString={postData.date} />
         </Text>
+        {badges.length > 0 && <>{badges}</>}
         <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
           components={{

@@ -3,7 +3,7 @@ title: "Optimizing SVG Images for Dark Mode: Inverting Colors with CSS and JavaS
 date: "2023-05-13"
 excerpt: "Learn how to optimize SVG images for dark mode by inverting colors with CSS and JavaScript. This article provides easy-to-follow steps to ensure your SVG images remain visible regardless of the user's preferred theme."
 image: ""
-tags: ["front-end", "javascript", "react", "css", "svg"]
+tags: ["frontend", "javascript", "react", "css", "svg"]
 ---
 
 ## Understanding the problem

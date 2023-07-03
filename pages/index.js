@@ -3,11 +3,24 @@ import Link from "next/link";
 import Layout, { siteTitle } from "../components/layout";
 import Date from "../components/date";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
-import { Heading, Text } from "spartak-ui";
+import { getAllPostTags, getSortedPostsData } from "../lib/posts";
+import { Badge, Heading, Text } from "spartak-ui";
 
+export default function Home({ allPostsData, allTags }) {
+  const tags = allTags || [];
+  const badges = tags.map((tag) => (
+    <Link href={`/tag/${tag.split(" ").join("-")}`} key={tag}>
+      <Badge
+        size="md"
+        css={{ margin: "8px 4px 0 0" }}
+        variant="outlined"
+        color="green"
+      >
+        {tag.toLowerCase()}
+      </Badge>
+    </Link>
+  ));
 
-export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
@@ -15,8 +28,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <Text size="xl" align="center" secondary>
-          Frontend Engineer, Google certified Mobile Web
-          Specialist
+          Frontend Engineer, Google certified Mobile Web Specialist
         </Text>
         <Text size="xl" align="center" secondary>
           Typescript &#183; Javascript &#183; React &#183; Node.js
@@ -68,15 +80,22 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      <section>
+        <Heading size="xl">Topics</Heading>
+        {badges}
+      </section>
     </Layout>
   );
 }
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const tagsMap = getAllPostTags();
+  const allTags = [...tagsMap.values()];
   return {
     props: {
       allPostsData,
+      allTags,
     },
   };
 }
