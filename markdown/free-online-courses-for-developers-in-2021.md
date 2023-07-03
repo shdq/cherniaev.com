@@ -3,7 +3,7 @@ title: "Free Online Courses for Developers to Take in 2021"
 date: "2021-07-13"
 excerpt: "Collection of free online courses I recommend for developers to take in 2021"
 image: "https://cdn-images-1.medium.com/max/2400/1*gLrR5dyOouzLvJYfhIWd7A.jpeg"
-tags: ["education", "online courses"]
+tags: ["online courses", "javascript", "frontend", "fullstack", "computer science"]
 ---
 
 ![Navigating with a compass in Yosemite National Park](https://cdn-images-1.medium.com/max/2400/1*gLrR5dyOouzLvJYfhIWd7A.jpeg "Navigating with a compass in Yosemite National Park")
