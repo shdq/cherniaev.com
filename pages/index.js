@@ -28,10 +28,10 @@ export default function Home({ allPostsData, allTags }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <Text size="xl" align="center" secondary>
-          Frontend Engineer, Google certified Mobile Web Specialist
+          Full Stack Engineer, Google certified Mobile Web Specialist
         </Text>
         <Text size="xl" align="center" secondary>
-          Typescript &#183; Javascript &#183; React &#183; Node.js
+          Typescript &#183; React &#183; Node.js
         </Text>
         <Text size="md" align="center">
           <Text
